@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box; /* Memastikan padding dan border termasuk dalam total width/height */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+header {
+  position: relative;
+  width: 100%; /* Navbar mengambil seluruh lebar kontainer */
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.9); /* Warna latar belakang navbar */
+  position: relative; /* Awalnya dalam posisi relatif */
+  width: calc(100% - 40px); /* Mengurangi lebar untuk ruang di sisi */
+  margin: 20px auto; /* Memberikan ruang di semua sisi navbar di tengah */
+  padding: 15px 20px; /* Ruang di dalam navbar */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  transition: width 0.8s ease, box-shadow 0.8s ease; /* Transisi lebar dan bayangan yang halus */
+  z-index: 1000; /* Agar tetap di atas konten lain */
+  border-radius: 10px; /* Sudut membulat */
+}
+
+/* Modifier untuk navbar sticky */
+.navbar.sticky {
+  position: fixed; /* Menjadi fixed saat discroll */
+  left: 50%; /* Mengatur posisi di tengah */
+  transform: translateX(
+    -50%
+  ); /* Menyesuaikan posisi navbar agar tetap di tengah */
+  width: calc(100% - 200px); /* Mengurangi lebar saat sticky */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Mengurangi bayangan saat sticky */
+}
+
+.container {
+  max-width: 1200px; /* Maks lebar kontainer */
+  margin: 0 auto; /* Pusatkan kontainer */
+  display: flex; /* Memastikan tautan dalam satu baris */
+  gap: 15px; /* Jarak antar tautan */
+}
+
+.navbar a {
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: #333; /* Warna teks */
+  transition: color 0.3s, transform 0.3s; /* Transisi warna dan transformasi pada tautan */
+}
+
+.navbar a:hover {
+  color: #007bff; /* Ubah warna saat hover */
+  transform: scale(1.05); /* Membesarkan sedikit saat hover */
+}
+
+/* Contoh styling untuk konten utama */
+main {
+  padding: 80px 15px; /* Ruang untuk konten di bawah navbar */
+}
+
+section {
+  height: 600px; /* Menentukan tinggi untuk demonstrasi */
+}
