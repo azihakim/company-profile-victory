@@ -9,12 +9,35 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed; /* Tetapkan posisi navbar agar fixed */
   width: 100%; /* Navbar mengambil seluruh lebar kontainer */
+  top: 0; /* Menempatkan navbar di atas */
+  z-index: 1000; /* Agar tetap di atas konten lain */
+}
+
+/* Mengatur font secara global di seluruh halaman */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Mengatur font untuk heading */
+h1,
+h2,
+h3 {
+  font-family: "Lato", sans-serif; /* Membuat heading menggunakan font yang sama */
+  font-weight: 700; /* Menebalkan font untuk heading */
+}
+
+/* Mengatur font untuk paragraf */
+p {
+  font-family: "Lato", sans-serif; /* Font untuk paragraf */
+  font-weight: 400; /* Mengatur berat font */
+  font-size: 16px; /* Ukuran font untuk paragraf */
+  line-height: 1.5; /* Jarak antar baris */
 }
 
 .navbar {
-  background: rgba(255, 255, 255, 0.9); /* Warna latar belakang navbar */
+  background: white;
   position: relative; /* Awalnya dalam posisi relatif */
   width: calc(100% - 40px); /* Mengurangi lebar untuk ruang di sisi */
   margin: 20px auto; /* Memberikan ruang di semua sisi navbar di tengah */
@@ -56,9 +79,149 @@ header {
 
 /* Contoh styling untuk konten utama */
 main {
-  padding: 80px 15px; /* Ruang untuk konten di bawah navbar */
+  margin-top: -100px; /* Memberikan ruang di atas untuk navbar */
 }
 
 section {
   height: 600px; /* Menentukan tinggi untuk demonstrasi */
+}
+
+/* Menambahkan gaya untuk bagian hero */
+.hero-section {
+  background-image: url("bg.jpg"); /* Pastikan ini adalah jalur yang benar ke gambar Anda */
+  background-size: cover; /* Menutupi seluruh area tanpa mengubah rasio */
+  background-position: center; /* Memusatkan gambar */
+  height: 500px; /* Tinggi seperti yang diminta */
+  display: flex; /* Untuk memposisikan teks dengan baik */
+  justify-content: center; /* Mengatur konten secara horizontal di tengah */
+  align-items: center; /* Mengatur konten secara vertikal di tengah */
+  color: white; /* Warna teks untuk kontras */
+  text-align: center; /* Membuat teks terpusat */
+  position: relative; /* Agar teks tidak terpengaruh oleh efek z-index */
+  margin-top: 60px; /* Margin atas untuk menghindari navbar */
+}
+
+.hero-content h1 {
+  font-size: 48px; /* Ukuran font untuk judul */
+  margin: 0; /* Mengatur margin untuk judul */
+}
+
+.hero-content h4 {
+  font-size: 24px; /* Ukuran font untuk subjudul */
+  margin: 10px 0 0; /* Mengatur margin untuk subjudul */
+}
+
+/* Gaya untuk section "At a Glance" */
+#at-a-glance {
+  padding: 40px 15px; /* Ruang di dalam section */
+  text-align: center; /* Mengatur konten di tengah */
+}
+
+#at-a-glance h2 {
+  font-size: 36px; /* Ukuran font untuk judul */
+  margin-bottom: 20px; /* Jarak bawah dari judul */
+}
+
+.glance-row {
+  display: flex; /* Menggunakan Flexbox untuk penataan kolom */
+  justify-content: space-around; /* Memberikan jarak yang sama antar kolom */
+  margin: 0 auto; /* Pusatkan baris */
+}
+
+.glance-item {
+  flex: 1; /* Biarkan kolom mengambil lebar yang sama */
+  margin: 0 10px; /* Jarak antar kolom (kiri dan kanan) */
+}
+
+.glance-item h3 {
+  margin: 0; /* Menghilangkan margin default */
+  font-size: 24px; /* Ukuran font untuk item */
+  color: #333; /* Warna teks */
+}
+
+.glance-item p {
+  margin-top: 5px; /* Jarak atas untuk deskripsi */
+  font-size: 16px; /* Ukuran font untuk deskripsi */
+  color: #555; /* Warna teks untuk deskripsi, lebih terang untuk memudahkan baca */
+}
+
+/* Gaya untuk section "About Us" */
+#about-us {
+  padding: 40px 15px; /* Ruang di dalam section */
+  text-align: center; /* Mengatur judul di tengah */
+}
+
+#about-us h2 {
+  font-size: 36px; /* Ukuran font untuk judul */
+  margin-bottom: 20px; /* Jarak bawah dari judul */
+}
+
+.about-container {
+  display: flex; /* Menggunakan Flexbox untuk penataan */
+  align-items: center; /* Menyelaraskan item secara vertikal */
+  justify-content: center; /* Memusatkan konten secara horizontal */
+  margin: auto; /* Pusatkan kontainer */
+}
+
+.logo {
+  display: flex; /* Menggunakan Flexbox untuk pusatkan logo */
+  justify-content: center; /* Memusatkan logo */
+  flex: 1; /* Membiarkan logo mengambil ruang */
+}
+
+.logo img {
+  max-width: 350px; /* Ukuran maksimum logo */
+  height: auto; /* Memastikan aspek rasio tetap sama */
+}
+
+.description {
+  max-width: 600px; /* Membatasi lebar deskripsi untuk kenyamanan baca */
+  margin-left: 20px; /* Jarak antara logo dan deskripsi */
+  text-align: left; /* Menjadikan teks rata kiri */
+}
+
+.description h3 {
+  font-size: 28px; /* Ukuran font untuk nama perusahaan */
+  margin-bottom: 10px; /* Jarak bawah untuk nama perusahaan */
+  color: #333; /* Warna teks */
+}
+
+.description p {
+  font-size: 16px; /* Ukuran font untuk deskripsi */
+  color: #555555ff; /* Warna teks untuk deskripsi */
+}
+
+.read-more {
+  color: #555555ff; /* Warna teks untuk tautan */
+  text-decoration: underline; /* Garis bawah untuk tautan */
+  cursor: pointer; /* Mengubah kursor saat hover untuk menunjukkan bahwa ini adalah tautan */
+}
+
+.read-more:hover {
+  color: #454444ff; /* Warna teks saat hover */
+  text-decoration: none; /* Menghilangkan garis bawah saat hover */
+  font-weight: bold; /* Menebalkan teks saat hover */
+}
+
+/* Media Queries untuk perangkat seluler */
+@media (max-width: 768px) {
+  .glance-row {
+    flex-direction: column; /* Ubah menjadi kolom untuk layar kecil */
+  }
+
+  .glance-item {
+    margin: 10px 0; /* Ganti margin menjadi vertikal */
+  }
+
+  #at-a-glance h2 {
+    font-size: 28px; /* Ukuran font untuk judul yang lebih kecil pada layar kecil */
+  }
+
+  .glance-item h3 {
+    font-size: 20px; /* Ukuran font yang lebih kecil untuk item */
+  }
+
+  .glance-item p {
+    font-size: 14px; /* Ukuran font yang lebih kecil untuk deskripsi */
+  }
 }

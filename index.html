@@ -6,42 +6,75 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Victory Commodities Pte Ltd</title>
  <link rel="stylesheet" href="styles.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link
+  href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+  rel="stylesheet">
 </head>
 
 <body>
  <header>
   <nav class="navbar" id="navbar">
    <div class="container">
-    <a href="#home">Beranda</a>
-    <a href="#about">Tentang Kami</a>
-    <a href="#products">Produk</a>
-    <a href="#services">Layanan</a>
-    <a href="#sustainability">Keberlanjutan</a>
-    <a href="#contact">Hubungi Kami</a>
+    <div class="logo-nav">
+     <img src="logo-o.png" alt="Company Logo" style="max-width: 40px;">
+     <!-- Ganti 'logo.png' dengan jalur logo Anda -->
+    </div>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About Us</a>
+    <a href="#sustainability">Sustainability</a>
+    <a href="#contact">Contact Us</a>
    </div>
   </nav>
  </header>
 
  <main>
   <!-- Konten halaman Anda di sini -->
-  <section id="home">
-   <h1>Selamat Datang</h1>
+  <section id="title" class="hero-section">
+   <div class="hero-content">
+    <h1>VICTORY COMMODITIES PTE LTD</h1>
+    <h4>AN AGRI COMMODITY TRADING COMPANY BASED IN SINGAPORE</h4>
+   </div>
   </section>
-  <section id="about">
-   <h2>Tentang Kami</h2>
+
+  <section id="at-a-glance" style="margin-bottom: -25%;">
+   <h2>At a Glance</h2>
+   <div class="glance-row">
+    <div class="glance-item">
+     <h3>3 Thousand Tons ++ During 2025</h3>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, aperiam nobis ipsa voluptatibus nam dolor
+      quo maxime hic</p>
+    </div>
+    <div class="glance-item">
+     <h3>Since 20xx</h3>
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, laboriosam iusto omnis magni exercitationem
+     </p>
+    </div>
+    <div class="glance-item">
+     <h3>Flagship Products</h3>
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam quasi excepturi optio quod, at corrupti</p>
+    </div>
+   </div>
   </section>
-  <section id="products">
-   <h2>Produk</h2>
+
+  <section id="about-us">
+   <!-- <h2>About Us</h2> -->
+   <div class="about-container">
+    <div class="logo">
+     <img src="logo.png" alt="Company Logo"> <!-- Ganti 'logo.png' dengan jalur logo Anda -->
+    </div>
+    <div class="description">
+     <h3>VICTORY COMMODITIES</h3>
+     <p>VICTORY COMMODITIES is a trading company that focuses on leading agricultural commodities. Established in 20xx,
+      we have a strong network ranging from upstream (farmers, plantations, factories) to downstream (producers,
+      distributors, international buyers).</p>
+     <a href="about.html" class="read-more">Read More About Us</a>
+    </div>
+   </div>
   </section>
-  <section id="services">
-   <h2>Layanan</h2>
-  </section>
-  <section id="sustainability">
-   <h2>Keberlanjutan</h2>
-  </section>
-  <section id="contact">
-   <h2>Hubungi Kami</h2>
-  </section>
+
  </main>
  <script src="scripts.js"></script>
 </body>
