@@ -1,227 +1,165 @@
+/* Umum */
 * {
-  box-sizing: border-box; /* Memastikan padding dan border termasuk dalam total width/height */
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden; /* Menghindari scroll horizontal */
-}
-
-header {
-  position: fixed; /* Tetapkan posisi navbar agar fixed */
-  width: 100%; /* Navbar mengambil seluruh lebar kontainer */
-  top: 0; /* Menempatkan navbar di atas */
-  z-index: 1000; /* Agar tetap di atas konten lain */
-}
-
-/* Mengatur font secara global di seluruh halaman */
-body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
-/* Mengatur font untuk heading */
-h1,
-h2,
-h3 {
-  font-family: "Lato", sans-serif; /* Membuat heading menggunakan font yang sama */
-  font-weight: 700; /* Menebalkan font untuk heading */
+/* Navbar tetap seperti semula (non-Bootstrap styling) */
+header {
 }
 
-/* Mengatur font untuk paragraf */
-p {
-  font-family: "Lato", sans-serif; /* Font untuk paragraf */
-  font-weight: 400; /* Mengatur berat font */
-  font-size: 16px; /* Ukuran font untuk paragraf */
-  line-height: 1.5; /* Jarak antar baris */
-}
-
+/* Navbar utama tetap */
 .navbar {
   background: white;
-  position: relative; /* Awalnya dalam posisi relatif */
-  width: calc(100% - 40px); /* Mengurangi lebar untuk ruang di sisi */
-  margin: 20px auto; /* Memberikan ruang di semua sisi navbar di tengah */
-  padding: 15px 20px; /* Ruang di dalam navbar */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-  transition: width 0.8s ease, box-shadow 0.8s ease; /* Transisi lebar dan bayangan yang halus */
-  z-index: 1000; /* Agar tetap di atas konten lain */
-  border-radius: 10px; /* Sudut membulat */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 14px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: padding 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0;
 }
 
-/* Modifier untuk navbar sticky */
-.navbar.sticky {
-  position: fixed; /* Menjadi fixed saat discroll */
-  left: 50%; /* Mengatur posisi di tengah */
-  transform: translateX(
-    -50%
-  ); /* Menyesuaikan posisi navbar agar tetap di tengah */
-  width: calc(100% - 200px); /* Mengurangi lebar saat sticky */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Mengurangi bayangan saat sticky */
+.navbar .container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-.container {
-  max-width: 1200px; /* Maks lebar kontainer */
-  margin: 0 auto; /* Pusatkan kontainer */
-  display: flex; /* Memastikan tautan dalam satu baris */
-  gap: 15px; /* Jarak antar tautan */
+.logo-nav img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.navbar a {
-  text-decoration: none; /* Menghilangkan garis bawah */
-  color: #333; /* Warna teks */
-  transition: color 0.3s, transform 0.3s; /* Transisi warna dan transformasi pada tautan */
+/* Nav item styling (sesuaikan seperti semula) */
+.nav-links a,
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+.nav-links a:hover,
+.nav-link:hover {
+  color: #007bff;
+  transform: scale(1.05);
 }
 
-.navbar a:hover {
-  color: #007bff; /* Ubah warna saat hover */
-  transform: scale(1.05); /* Membesarkan sedikit saat hover */
-}
-
-/* Contoh styling untuk konten utama */
+/* Konten utama menghindari tertutup navbar */
 main {
-  margin-top: -100px; /* Memberikan ruang di atas untuk navbar */
+  margin-top: 0;
 }
 
-section {
-  height: 600px; /* Menentukan tinggi untuk demonstrasi */
-}
-
-/* Menambahkan gaya untuk bagian hero */
+/* Hero */
 .hero-section {
-  background-image: url("bg.jpg"); /* Pastikan ini adalah jalur yang benar ke gambar Anda */
-  background-size: cover; /* Menutupi seluruh area tanpa mengubah rasio */
-  background-position: center; /* Memusatkan gambar */
-  height: 500px; /* Tinggi seperti yang diminta */
-  display: flex; /* Untuk memposisikan teks dengan baik */
-  justify-content: center; /* Mengatur konten secara horizontal di tengah */
-  align-items: center; /* Mengatur konten secara vertikal di tengah */
-  color: white; /* Warna teks untuk kontras */
-  text-align: center; /* Membuat teks terpusat */
-  position: relative; /* Agar teks tidak terpengaruh oleh efek z-index */
-  margin-top: 60px; /* Margin atas untuk menghindari navbar */
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: 60px;
 }
-
 .hero-content h1 {
-  font-size: 48px; /* Ukuran font untuk judul */
-  margin: 0; /* Mengatur margin untuk judul */
+  font-size: 48px;
+  margin: 0;
 }
-
 .hero-content h4 {
-  font-size: 24px; /* Ukuran font untuk subjudul */
-  margin: 10px 0 0; /* Mengatur margin untuk subjudul */
+  font-size: 24px;
+  margin: 10px 0 0;
 }
 
-/* Gaya untuk section "At a Glance" */
+/* At a Glance */
 #at-a-glance {
-  padding: 40px 15px; /* Ruang di dalam section */
-  text-align: center; /* Mengatur konten di tengah */
+  padding: 40px 15px;
+  text-align: center;
 }
-
 #at-a-glance h2 {
-  font-size: 36px; /* Ukuran font untuk judul */
-  margin-bottom: 20px; /* Jarak bawah dari judul */
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.glance-row {
-  display: flex; /* Menggunakan Flexbox untuk penataan kolom */
-  justify-content: space-around; /* Memberikan jarak yang sama antar kolom */
-  margin: 0 auto; /* Pusatkan baris */
-}
-
-.glance-item {
-  flex: 1; /* Biarkan kolom mengambil lebar yang sama */
-  margin: 0 10px; /* Jarak antar kolom (kiri dan kanan) */
-}
-
-.glance-item h3 {
-  margin: 0; /* Menghilangkan margin default */
-  font-size: 24px; /* Ukuran font untuk item */
-  color: #333; /* Warna teks */
-}
-
-.glance-item p {
-  margin-top: 5px; /* Jarak atas untuk deskripsi */
-  font-size: 16px; /* Ukuran font untuk deskripsi */
-  color: #555; /* Warna teks untuk deskripsi, lebih terang untuk memudahkan baca */
-}
-
-/* Gaya untuk section "About Us" */
+/* About Us */
 #about-us {
-  padding: 40px 15px; /* Ruang di dalam section */
-  text-align: center; /* Mengatur judul di tengah */
+  padding: 40px 15px;
+  text-align: center;
 }
 
-#about-us h2 {
-  font-size: 36px; /* Ukuran font untuk judul */
-  margin-bottom: 20px; /* Jarak bawah dari judul */
-}
-
-.about-container {
-  display: flex; /* Menggunakan Flexbox untuk penataan */
-  align-items: center; /* Menyelaraskan item secara vertikal */
-  justify-content: center; /* Memusatkan konten secara horizontal */
-  margin: auto; /* Pusatkan kontainer */
-}
-
-.logo {
-  display: flex; /* Menggunakan Flexbox untuk pusatkan logo */
-  justify-content: center; /* Memusatkan logo */
-  flex: 1; /* Membiarkan logo mengambil ruang */
-}
-
-.logo img {
-  max-width: 350px; /* Ukuran maksimum logo */
-  height: auto; /* Memastikan aspek rasio tetap sama */
-}
-
-.description {
-  max-width: 600px; /* Membatasi lebar deskripsi untuk kenyamanan baca */
-  margin-left: 20px; /* Jarak antara logo dan deskripsi */
-  text-align: left; /* Menjadikan teks rata kiri */
-}
-
-.description h3 {
-  font-size: 28px; /* Ukuran font untuk nama perusahaan */
-  margin-bottom: 10px; /* Jarak bawah untuk nama perusahaan */
-  color: #333; /* Warna teks */
-}
-
-.description p {
-  font-size: 16px; /* Ukuran font untuk deskripsi */
-  color: #555555ff; /* Warna teks untuk deskripsi */
-}
-
+/* Read more */
 .read-more {
-  color: #555555ff; /* Warna teks untuk tautan */
-  text-decoration: underline; /* Garis bawah untuk tautan */
-  cursor: pointer; /* Mengubah kursor saat hover untuk menunjukkan bahwa ini adalah tautan */
+  color: #555555ff;
+  text-decoration: underline;
+  cursor: pointer;
 }
-
 .read-more:hover {
-  color: #454444ff; /* Warna teks saat hover */
-  text-decoration: none; /* Menghilangkan garis bawah saat hover */
-  font-weight: bold; /* Menebalkan teks saat hover */
+  color: #454444ff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Media Queries untuk perangkat seluler */
+/* Mobile toggle dan menu alternatif (non-Bootstrap) */
+.mobile-menu {
+  display: none;
+}
+
+/* Fokus pada responsive mobile untuk menyembunyikan nav links dan menampilkan burger */
+@media (max-width: 991.98px) {
+  /* Tampilkan tombol burger untuk mobile */
+  #mobileToggle {
+    display: inline-block;
+  }
+
+  /* Sembunyikan tautan langsung di navbar untuk mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Panel mobile ditampilkan/hidden via JS; default disembunyikan di CSS jika diperlukan */
+  .mobile-panel {
+    display: none;
+  }
+  #mobilePanel {
+    display: none;
+  }
+
+  /* Jika Anda menginginkan panel terlihat saat aktif, JS akan mengubah display */
+}
+
+@media (min-width: 992px) {
+  /* Desktop tetap menampilkan navbar seperti biasa */
+  #mobileToggle {
+    display: none;
+  }
+  .mobile-panel {
+    display: none;
+  }
+}
+
+/* Responsive khusus untuk hero tweaks jika diperlukan */
 @media (max-width: 768px) {
-  .glance-row {
-    flex-direction: column; /* Ubah menjadi kolom untuk layar kecil */
+  .hero-section {
+    height: 420px;
   }
-
-  .glance-item {
-    margin: 10px 0; /* Ganti margin menjadi vertikal */
+  .hero-content h1 {
+    font-size: 38px;
   }
-
-  #at-a-glance h2 {
-    font-size: 28px; /* Ukuran font untuk judul yang lebih kecil pada layar kecil */
-  }
-
-  .glance-item h3 {
-    font-size: 20px; /* Ukuran font yang lebih kecil untuk item */
-  }
-
-  .glance-item p {
-    font-size: 14px; /* Ukuran font yang lebih kecil untuk deskripsi */
+  .hero-content h4 {
+    font-size: 18px;
   }
 }
