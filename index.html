@@ -17,6 +17,7 @@
  <link
   href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
   rel="stylesheet" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -27,8 +28,6 @@
      <img src="logo-o.png" alt="Company Logo" style="max-width: 40px;">
      <span class="ms-2 fw-bold">Victory Commodities</span>
     </div>
-
-    <!-- Tautan navigasi utama (hidden di mobile) -->
     <div class="nav-links d-none d-md-flex align-items-center gap-3">
      <a href="#home" class="nav-link p-2 text-decoration-none text-dark">Home</a>
      <a href="#products" class="nav-link p-2 text-decoration-none text-dark">Products</a>
@@ -36,13 +35,10 @@
      <a href="#sustainability" class="nav-link p-2 text-decoration-none text-dark">Careers</a>
      <a href="#contact" class="nav-link p-2 text-decoration-none text-dark">Contact Us</a>
     </div>
-
-    <!-- Burger button untuk mobile -->
     <button class="btn btn-outline-dark d-md-none" type="button" id="mobileToggle" aria-label="Toggle navigation"
      onclick="toggleNav()">☰</button>
    </div>
 
-   <!-- Panel menu mobile (hidden by default) -->
    <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation" style="display: none;">
     <div class="container py-2 d-flex flex-column gap-2">
      <a href="#home" class="nav-link p-2 text-dark">Home</a>
@@ -55,9 +51,7 @@
   </nav>
  </header>
 
-
  <main>
-  <!-- Hero / Title -->
   <section id="title" class="hero-section">
    <div class="container hero-content text-center text-white py-5">
     <h1 class="display-5 fw-bold mb-1">VICTORY COMMODITIES PTE LTD</h1>
@@ -65,7 +59,6 @@
    </div>
   </section>
 
-  <!-- At a Glance (menggunakan Bootstrap grid) -->
   <section id="at-a-glance" class="py-5" style="margin-top: -15%;">
    <div class="container">
     <h2 class="text-center mb-4">At a Glance</h2>
@@ -101,66 +94,187 @@
    </div>
   </section>
 
-  <!-- About Us -->
-  <section id="about-us" class="py-5" style="margin-top: -5%;">
-   <div class=" container">
-    <div class="row align-items-center g-4">
-     <div class="col-md-6 col-12 text-center">
-      <div class="logo">
-       <img src="logo.png" alt="Company Logo" class="img-fluid" style="max-width: 350px;" />
-      </div>
-     </div>
-     <div class="col-md-6 col-12">
-      <div class="description text-start">
-       <h3 class="mb-3">VICTORY COMMODITIES</h3>
-       <p>VICTORY COMMODITIES is a trading company that focuses on leading agricultural commodities. Established in
-        20xx,
-        we have a strong network ranging from upstream (farmers, plantations, factories) to downstream (producers,
-        distributors, international buyers).</p>
-       <a href="about.html" class="read-more">Read More About Us</a>
+  <section id="about" class="py-5 bg-light">
+   <div class="container">
+    <div class="text-center mb-5">
+     <h2 class="display-5 fw-bold">About Us</h2>
+     <div class="bg-success mx-auto" style="width: 100px; height: 4px;"></div>
+    </div>
+
+    <div class="card hover-lift shadow-lg border-0 mx-auto" style="max-width: 80%;">
+     <div class="card-body p-5">
+      <p class="lead mb-4">
+       <span class="text-success fw-bold">VICTORY COMMODITIES</span> is a trading company that focuses on leading
+       agricultural commodities. Established in 20xx, we have a strong network ranging from upstream (farmers,
+       plantations, factories) to downstream (producers, distributors, international buyers).
+      </p>
+      <p class="lead mb-4">
+       We position ourselves as a strategic partner that not only sells products but also provides quality assurance,
+       timely delivery, and valuable market information. Our operations are supported by a team with extensive
+       experience in agribusiness, logistics, and international trade.
+      </p>
+
+      <div class="row mt-5">
+       <div class="col-md-3 text-center">
+        <div class="feature-icon bg-primary mb-3">
+         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+         </svg>
+        </div>
+        <h3 class="h4">Direct from Source</h3>
+        <p class="text-muted">Reducing the supply chain, more competitive prices for buyers, better prices for producers
+        </p>
+       </div>
+       <div class="col-md-3 text-center">
+        <div class="feature-icon bg-success mb-3">
+         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+           d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+         </svg>
+        </div>
+        <h3 class="h4">Quality Consistency</h3>
+        <p class="text-muted">A strict quality control system ensures that products are delivered according to agreed
+         specifications</p>
+       </div>
+       <div class="col-md-3 text-center">
+        <div class="feature-icon bg-danger mb-3">
+         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+         </svg>
+        </div>
+        <h3 class="h4">Supply Reliability</h3>
+        <p class="text-muted">An extensive supplier network and diversified sources ensure stable supply</p>
+       </div>
+       <div class="col-md-3 text-center">
+        <div class="feature-icon bg-danger mb-3">
+         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+         </svg>
+        </div>
+        <h3 class="h4">End-to-End Solution</h3>
+        <p class="text-muted">Clients can focus on their core business while we handle all processes from sourcing to
+         delivery</p>
+       </div>
       </div>
      </div>
     </div>
    </div>
   </section>
 
-  <section id="visionMision" class="py-5 bg-light">
-   <div class="container">
-    <div class="row align-items-center g-4">
-     <div class="col-md-6 col-12">
-      <div class="vision text-start">
-       <h1 class="mb-3">Our Vision</h1>
-       <p>To be <strong>#1</strong> leading and trusted agricultural commodity trading
-        company that connects producers with the global market. </p>
+  <section id="vision-mission" class="parallax-vision">
+   <div class="parallax-overlay"></div>
+   <div class="container vision-mission-section">
+    <div class="row g-4">
+     <div class="col-12 text-center mb-5">
+      <h2 class="display-5 fw-bold text-white">Vision & Mission</h2>
+      <div class="bg-white mx-auto" style="width: 100px; height: 4px;"></div>
+     </div>
+     <div class="col-md-6">
+      <div class="vision-card text-center" style="height: 100%;">
+       <div class="vision-icon mb-3">
+        <i class="fas fa-eye" style="font-size: 50px; color: currentColor;"></i>
+       </div>
+       <h3 class="h4 mb-3 text-success">Our Vision</h3>
+       <p class="text-muted text-center">
+        To be <strong class="text-success">#1 leading and trusted</strong> agricultural commodity trading company that
+        connects producers with the global market.
+       </p>
       </div>
      </div>
-     <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
-      <div class="vision text-center">
-       <img src="image/high-angle-sack.jpg" alt="Our Vision" class="img-fluid rounded" style="width: 550px;">
-      </div>
-     </div>
-    </div>
-    <div class="row align-items-center g-4 mt-2">
-     <div class="col-md-6 col-12">
-      <div class="vision text-center">
-       <img src="image/farmer-controlling.jpg" alt="Our Mission" class="img-fluid rounded" style="width: 550px;" />
-      </div>
-     </div>
-     <div class="col-md-6 col-12">
-      <div class="mision text-start">
-       <h1 class="mb-3">Our Mission</h1>
-       <ul>
-        <li><strong>Quality & Trust:</strong> Providing high-quality agricultural commodities with international
-         standards and upholding integrity in every transaction.</li>
-        <li><strong>Customer Satisfaction:</strong> Meeting the needs of domestic and international customers with
-         efficient, flexible services and reliable logistics solutions.</li>
-        <li><strong>Sustainable Innovation:</strong> Implementing the best technologies and practices in the supply
-         chain to ensure quality, safety, and sustainability.</li>
+     <div class="col-md-6">
+      <div class="mission-card text-center">
+       <div class="mission-icon mb-3">
+        <i class="fa-solid fa-bullseye" style="font-size: 50px; color: currentColor;"></i>
+       </div>
+       <h3 class="h4 mb-3" style="color: #ff5722;">Our Mission</h3>
+       <ul class="text-start list-unstyled">
+        <li class="mb-3">
+         <span style="color: #28a745;">●</span>
+         <strong>Quality & Trust</strong><br>
+         <span class="text-muted ps-3 d-block">Providing high-quality agricultural commodities with international
+          standards and
+          upholding integrity.</span>
+        </li>
+        <li class="mb-3">
+         <span style="color: #dc3545;">●</span>
+         <strong>Customer Satisfaction</strong><br>
+         <span class="text-muted ps-3 d-block">Meeting customer needs with efficient, flexible services and reliable
+          logistics.</span>
+        </li>
+        <li class="mb-3">
+         <span style="color: #007bff;">●</span>
+         <strong>Sustainable Innovation</strong><br>
+         <span class="text-muted ps-3 d-block">Implementing best technologies to ensure quality, safety, and
+          sustainability.</span>
+        </li>
        </ul>
       </div>
      </div>
     </div>
    </div>
+  </section>
+
+  <section id="our-products" class="our-products-section">
+   <div class="container">
+    <div class="section-header text-center mb-5">
+     <h2>Our Products</h2>
+     <div class="underline"></div>
+     <p class="lead text-muted">Premium agricultural commodities sourced directly from trusted producers worldwide</p>
+    </div>
+
+    <div class="row align-items-stretch g-4">
+     <!-- Kiri: Product Categories -->
+     <div class="col-lg-5">
+      <div class="category-list">
+
+       <h5 class="card-title mb-3">Product Categories</h5>
+       <div id="categoryListBody"></div>
+
+      </div>
+     </div>
+
+     <!-- Kanan: Product Card & Detail -->
+     <div class="col-lg-7">
+      <div class="product-card-large">
+       <div class="card product-hero mb-3">
+        <div class="row g-0">
+         <div class="col-md-6 p-3">
+          <img id="detailImage" src="image/natural-rubber.png" class="img-fluid rounded" alt="Natural Rubber">
+         </div>
+         <div class="col-md-6 p-3 d-flex flex-column justify-content-center">
+          <h3 id="detailTitle" class="mb-2">Natural Rubber</h3>
+          <p id="detailDesc" class="text-muted mb-3">
+           High-quality natural rubber sourced from premium plantations across Southeast Asia and Africa,
+           meeting international standards for various industrial applications.
+          </p>
+          <div class="available-variants mb-2">
+           <strong>Available Variants:</strong>
+           <ul class="list-unstyled mb-0" id="variantList"></ul>
+          </div>
+          <button class="btn btn-success mt-2 w-50" id="quoteBtn">Request Quote</button>
+         </div>
+        </div>
+       </div>
+
+       <!-- Deskripsi singkat untuk detail lainnya (opsional) -->
+       <div class="card product-info p-3">
+        <div class="row g-3">
+         <div class="col-md-6">
+          <h6 class="mb-1">Categories</h6>
+          <p class="mb-0 text-muted">Natural Rubber • Synthetic Rubber • Coffee Beans • Pepper</p>
+         </div>
+         <div class="col-md-6 text-md-end">
+          <span class="badge bg-secondary">Trusted Partner</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
  </main>
 
  <!-- Bootstrap JS (Bundle) -->
