@@ -114,6 +114,11 @@ main {
   color: white;
 }
 
+.feature-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
+
 .hover-lift {
   transition: transform 0.3s ease;
 }
